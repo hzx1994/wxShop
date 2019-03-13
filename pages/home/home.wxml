@@ -1,0 +1,36 @@
+<!--pages/home/home.wxml-->
+<!-- <text>pages/home/home.wxml</text> -->
+<view>
+  <view class='swiperView'>
+    <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' circular='{{circular}}' interval='{{interval}}' duration='{{duration}}'>
+      <block wx:for="{{imgUrls}}" wx:key="this">
+        <swiper-item>
+          <view bindtap='clickMe' class='swiper-item {{item}}'></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='page'>
+    <block wx:for="{{homeContent}}" wx:key="this">
+      <view class="page__hd">
+        <view class="page__title">{{item.title}}</view>
+        <view class="page__bd page__bd_spacing">
+          <block wx:for="{{item.goods}}" wx:key="this" wx:for-item="index" wx:for-item="good">
+
+            <view class='home_item'>
+
+
+
+              <text>{{good.name}}</text>
+
+            </view>
+
+
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>

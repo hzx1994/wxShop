@@ -1,0 +1,11 @@
+<!--pages/template/home_titles.wxml-->
+<template name="home_titles">
+  <view class='container'>
+    <block wx:for="{{goods}}" wx:key="this">
+      <view>
+        <image mode='aspectFill'></image>
+        <text>{{this}}</text>
+      </view>
+    </block>
+  </view>
+</template>
